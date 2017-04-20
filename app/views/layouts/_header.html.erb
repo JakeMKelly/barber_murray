@@ -1,5 +1,5 @@
 <nav class="navbar navbar-static-top navbar-default" role="navigation">
-  <div class="container">
+  <div class="container" id="nav-header">
       <ul class="nav navbar-nav navbar-left">
         <a class="navbar-brand" href="/" ><img id="brand" src="/assets/shears-favicon.ico"></a>
         <li id="home"> <%= link_to "Main", welcome_index_path %> </li>
@@ -22,7 +22,7 @@
           <li> <%= link_to "Sign up", new_user_registration_path %> </li>
           <li> <%= link_to "Login", new_user_session_path %> </li>
         <% end %>
-        <% end %> 
+        <% end %>
       </ul>
   </div>
 </nav>
