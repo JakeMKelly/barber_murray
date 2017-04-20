@@ -9,22 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= favicon_link_tag 'shears-favicon.ico' %>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Limelight" rel="stylesheet">
   </head>
 
   <body>
 
     <%= render 'layouts/header' %>
-    <div class="container" id="flash-alerts">
-      <div class='space'></div>
-      <% if notice %>
-        <div class="alert alert-success"><%= notice %></div>
-      <% end %>
-      <% if alert %>
-        <div class="alert alert-danger"><%= alert %></div>
-      <% end %>
-
-      <%= yield %>
-    </div>
+    <%= yield %>
 
     <div class="container">
       <%= render 'layouts/footer' %>
