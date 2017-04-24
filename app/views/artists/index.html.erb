@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-lg-12">
+    <h1>Our stylists</h1>
+  </div>
+</div>
+
+<div class="row index-list">
+  <% @artists.each do |artist| %>
+    <%= link_to artist_path(artist), class: 'artist-link' do %>
+      <div class="artist-pic col-md-4">
+        <!-- src needs to be either a local or s3 image -->
+          <img class="img-responsive" src="artist.avatar">
+          <div id="trip-list-text">
+            <h4><%= artist.name %></h4>
+            <ul class="style-ul">
+              <li>Main Location: <%= artist.location %></li>
+              <!-- Need a function to return men's, women's, beards, or any after checking each bool -->
+              <li>Cuts: <%= artist.capabilities? %></li>
+            </ul>
+          </div>
+        </div>
+    <% end %>
+  <% end %>
+</div>
