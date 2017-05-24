@@ -1,6 +1,6 @@
 <nav class="navbar navbar-default" role="navigation">
   <div class="navbar-header" >
-    <h3 class="navbar-brand">Murray's</h3>
+    <h3 class="navbar-brand"><a href="/">Murray's</a></h3>
     <button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target=".navbar-collapse">
       <span class="navbar-shears"><img class="img-responsive big-image" src="/assets/razor2.png" /></span>
     </button>
@@ -8,14 +8,15 @@
   <div class="navbar-collapse collapse">
     <ul class="nav navbar-nav navbar-left">
       <li><a href="/artists">Our stylists</a></li>
-      <li><a href="/login">Sign In</a></li>
       <li><a href="/locations">Locations</a></li>
       <li><a href="/shop">Shop</a></li>
-      <li><a href="/schedule">Set an Appointment</a></li>
+    <% if !@on_index %>
       <li id="home"><%= link_to "Main", welcome_index_path %></li>
+    <% end %>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><p>header links here</p></li>
+      <li><a href="/login">Sign In</a></li>
+      <li><a href="/schedule">Set an Appointment</a></li>
       <% if false %>
       <% if user_signed_in? %>
         <li> <%= link_to "My Appointments", user_appointments_path(current_user) %> </li>
